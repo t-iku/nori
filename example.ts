@@ -1,4 +1,4 @@
-import { Nori } from "./src/nori.ts";
+import { Nori } from "https://raw.githubusercontent.com/t-iku/nori/master/src/nori.ts";
 
 const app = new Nori();
 
