@@ -5,7 +5,7 @@ A powerless web framework for Deno.
 ## Usage
 
 ```TypeScript
-import { Nori } from "https://raw.githubusercontent.com/t-iku/nori/master/src/nori.ts";
+import { Nori } from "https://deno.land/x/nori@v0.0.1/src/nori.ts";
 
 const app = new Nori();
 
