@@ -14,4 +14,7 @@ export type Route = {
 export type Method =
   | "GET"
   | "POST"
+  | "PUT"
+  | "PATCH"
+  | "DELETE"
   | "ALL";

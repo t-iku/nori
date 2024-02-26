@@ -11,6 +11,18 @@ export class Nori {
     this.setRoute("POST", path, handler);
   }
 
+  put(path: string, handler: Handler) {
+    this.setRoute("PUT", path, handler);
+  }
+
+  patch(path: string, handler: Handler) {
+    this.setRoute("PATCH", path, handler);
+  }
+
+  delete(path: string, handler: Handler) {
+    this.setRoute("DELETE", path, handler);
+  }
+
   all(path: string, handler: Handler) {
     this.setRoute("ALL", path, handler);
   }
