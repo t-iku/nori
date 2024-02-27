@@ -28,6 +28,11 @@ export class NoriResponse {
     });
   }
 
+  public text(data: string) {
+    this._headers = { "Content-Type": "text/plain" };
+    return this.respond(data);
+  }
+
   public json(data: object) {
     this._headers = { "Content-Type": "application/json" };
     return this.respond(JSON.stringify(data));
@@ -36,5 +41,13 @@ export class NoriResponse {
   public html(data: string) {
     this._headers = { "Content-Type": "text/html" };
     return this.respond(data);
+  }
+
+  public redirect(url: string | URL, status = 302) {
+    return Response.redirect(url, status);
+  }
+
+  public error(status = 400) {
+    return new Response(null, { status });
   }
 }
