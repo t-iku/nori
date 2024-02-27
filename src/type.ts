@@ -1,6 +1,9 @@
+import { NoriResponse } from "./response.ts";
+
 export type Context = {
   request: Request;
   result: URLPatternResult;
+  response: NoriResponse;
 };
 
 export type Handler = (context: Context) => Response | Promise<Response>;

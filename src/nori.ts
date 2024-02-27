@@ -1,3 +1,4 @@
+import { NoriResponse } from "./response.ts";
 import { Handler, Method, Route } from "./type.ts";
 
 export class Nori {
@@ -45,7 +46,7 @@ export class Nori {
           result && (route.method === request.method || route.method === "ALL")
         ) {
           return route.handler(
-            { request, result },
+            { request, result, response: new NoriResponse() },
           );
         }
       }
