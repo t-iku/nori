@@ -7,10 +7,10 @@ export class NoriResponse {
   }
 
   public get status(): number {
-    return this.status;
+    return this._status;
   }
 
-  public set staus(v: number) {
+  public set status(v: number) {
     this._status = v;
   }
 
@@ -47,7 +47,7 @@ export class NoriResponse {
     return Response.redirect(url, status);
   }
 
-  public error(status = 400) {
-    return new Response(null, { status });
+  public error(status = 400, message?: string) {
+    return new Response(message, { status });
   }
 }
